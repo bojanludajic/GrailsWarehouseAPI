@@ -15,9 +15,10 @@ group "warehouse"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
-apply plugin:"war"
+//apply plugin:"war"
 apply plugin:"org.grails.grails-web"
 apply plugin:"org.grails.plugins.views-json"
+
 
 repositories {
     mavenCentral()
@@ -91,4 +92,13 @@ tasks.withType(GroovyCompile) {
 
 tasks.withType(Test) {
     useJUnitPlatform()
+}
+
+bootJar {
+    enabled = true
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+jar {
+    enabled = false // optional: disable plain jar if you're only using bootJar
 }
