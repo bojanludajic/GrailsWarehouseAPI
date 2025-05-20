@@ -4,14 +4,14 @@ package com.example
 import grails.rest.*
 
 @Resource(readOnly = false, formats = ['json', 'xml'])
-class Warehouse {
+class Item {
     String name
-    String location
-    int capacity
+    Double price
+    Warehouse warehouse
 
     static constraints = {
         name blank: false
-        location blank: false
-        capacity min: 1, nullable: false
+        warehouse nullable: false
     }
+
 }
