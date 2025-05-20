@@ -10,6 +10,7 @@ class UrlMappings {
         put "/$controller/$id(.$format)?"(action:"update")
         patch "/$controller/$id(.$format)?"(action:"patch")
         "/warehouses"(resources: 'warehouse')
+        "/items"(resources: 'item')
 
         "/"(controller: 'application', action:'index')
         "500"(view: '/error')

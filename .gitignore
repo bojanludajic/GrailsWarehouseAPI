@@ -10,3 +10,7 @@ out/
 .project
 .settings
 .classpath
+gradlew.bat
+grailsw.bat
+gradlew
+grailsw
